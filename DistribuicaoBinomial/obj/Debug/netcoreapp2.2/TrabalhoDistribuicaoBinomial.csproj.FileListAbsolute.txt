@@ -1,0 +1,11 @@
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\obj\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.csprojAssemblyReference.cache
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\obj\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.csproj.CoreCompileInputs.cache
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\obj\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.AssemblyInfoInputs.cache
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\obj\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.AssemblyInfo.cs
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\bin\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.deps.json
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\bin\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.runtimeconfig.json
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\bin\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.runtimeconfig.dev.json
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\bin\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.dll
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\bin\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.pdb
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\obj\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.dll
+C:\Users\Igor\Documents\Probabilidade\DistribuicaoBinomial\obj\Debug\netcoreapp2.2\TrabalhoDistribuicaoBinomial.pdb
