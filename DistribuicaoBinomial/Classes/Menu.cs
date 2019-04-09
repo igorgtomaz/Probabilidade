@@ -82,13 +82,13 @@ namespace TrabalhoDistribuicaoBinomial.Classes
         {
             distribuicaoBinomial.ObterValorCalculoPoisson();
             distribuicaoBinomial.CalcularValorPoisson();
-            resultado = Math.Round(distribuicaoBinomial.CalcularDistribuicaoAcumulada(), 4);
+            resultado = Math.Round(distribuicaoBinomial.CalcularDistribuicaoDePoisson(), 4);
         }
 
         private void RealizarCalculoDistribuicaoBinomial(DistribuicaoBinomial distribuicaoBinomial, ref double resultado)
         {
             distribuicaoBinomial.ObterValoresPoisson();
-            resultado = Math.Round(distribuicaoBinomial.CalcularDistribuicaoAcumulada(), 4);
+            resultado = Math.Round(distribuicaoBinomial.CalcularDistribuicaoDePoisson(), 4);
         }
 
         private void ApresentarMenuPoisson(DistribuicaoBinomial distribuicaoBinomial, ref double resultado)
@@ -133,7 +133,7 @@ namespace TrabalhoDistribuicaoBinomial.Classes
             {
                 Console.Clear();
                 distribuicaoBinomial.ObterValores();
-                var resultado = Math.Round(distribuicaoBinomial.CalcularDistribuicaoBinomialIndividual(), 4);
+                var resultado = Math.Round(distribuicaoBinomial.CalcularDistribuicaoBinomialIndividual(distribuicaoBinomial.X), 4);
 
                 ApresentarFinalCalculo(resultado);
             }
@@ -141,9 +141,11 @@ namespace TrabalhoDistribuicaoBinomial.Classes
             {
                 double resultado = 0;
 
-                ApresentarMenuPoisson(distribuicaoBinomial, ref resultado);
+                Console.Clear();
+                distribuicaoBinomial.ObterValores();
+                var resultadoFinal = distribuicaoBinomial.CalcularDistribuicaoBinomialAcumulada();
 
-                ApresentarFinalCalculo(resultado);
+                ApresentarFinalCalculo(resultadoFinal);
             }
             else if (opcao == 3)
             {

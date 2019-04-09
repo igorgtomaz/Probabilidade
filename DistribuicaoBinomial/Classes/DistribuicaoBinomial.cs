@@ -6,7 +6,7 @@ namespace TrabalhoDistribuicaoBinomial.Classes
     {
         #region Atributos Públicos
         public double N { get; set; }
-        public double K { get; set; }
+        public double X { get; set; }
         public double P { get; set; }
         public double Lambda { get; set; }
         #endregion
@@ -19,14 +19,14 @@ namespace TrabalhoDistribuicaoBinomial.Classes
         public void ObterValores()
         {
             this.N = PerguntarValor("n");
-            this.K = PerguntarValor("k");
-            this.P = PerguntarValor("p");
+            this.X = PerguntarValor("x");
+            this.P = PerguntarValor("p em valor absoluto");
         }
 
         public void ObterValoresPoisson()
         {
             Console.WriteLine("");
-            this.K = PerguntarValor("k");
+            this.X = PerguntarValor("x");
             this.Lambda = PerguntarValor("Poisson");
         }
 
@@ -35,25 +35,43 @@ namespace TrabalhoDistribuicaoBinomial.Classes
             Console.WriteLine("");
             this.N = PerguntarValor("n");
             this.P = PerguntarValor("p");
-            this.K = PerguntarValor("k");
+            this.X = PerguntarValor("x");
         }
 
-        public double CalcularDistribuicaoBinomialIndividual()
+        public double CalcularDistribuicaoBinomialIndividual(double x)
         {
             AnaliseCombinatoria analiseCombinatoria = new AnaliseCombinatoria();
 
-            double resultadoAnaliseCombinatoria = analiseCombinatoria.CalcularAnaliseCombinatoria(this.K, this.N);
-            return (resultadoAnaliseCombinatoria * (Math.Pow(this.P, this.K) * (Math.Pow((1 - this.P), (this.N - this.K)))));
+            double resultadoAnaliseCombinatoria = analiseCombinatoria.CalcularAnaliseCombinatoria(x, this.N);
+            return (resultadoAnaliseCombinatoria * (Math.Pow(this.P, x) * (Math.Pow((1 - this.P), (this.N - x)))));
         }
 
-        public double CalcularDistribuicaoAcumulada()
+        public double CalcularDistribuicaoBinomialAcumulada()
+        {
+            double total = 0;
+
+            Console.WriteLine("");
+            Console.WriteLine("Calculando o x...");
+            Console.WriteLine("");
+
+            for (int i = 0; i <= this.X; i++)
+            {
+                double resultado = Math.Round(CalcularDistribuicaoBinomialIndividual(i), 4);
+                Console.WriteLine($"X = {i} = {resultado}");
+                total += resultado;
+            }
+
+            return total;
+        }
+
+        public double CalcularDistribuicaoDePoisson()
         {
             AnaliseCombinatoria analise = new AnaliseCombinatoria();
 
             var euler = Math.E;
-            var fatorialK = analise.CalcularFatorial(this.K);
+            var fatorialK = analise.CalcularFatorial(this.X);
             var eulerElevado = Math.Round(Math.Pow(euler, (this.Lambda * -1)), 9);
-            var lambdaElevado = Math.Round(Math.Pow(this.Lambda, this.K), 2);
+            var lambdaElevado = Math.Round(Math.Pow(this.Lambda, this.X), 2);
 
             return (eulerElevado * lambdaElevado) / fatorialK;
         }

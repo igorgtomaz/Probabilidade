@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Igor\\Documents\\Probabilidade\\DistribuicaoBinomial\\TrabalhoDistribuicaoBinomial.csproj",
+      "projectUniqueName": "D:\\Meus Documentos\\GitHub\\DistribuicaoBinomial\\TrabalhoDistribuicaoBinomial.csproj",
       "projectName": "TrabalhoDistribuicaoBinomial",
-      "projectPath": "C:\\Users\\Igor\\Documents\\Probabilidade\\DistribuicaoBinomial\\TrabalhoDistribuicaoBinomial.csproj",
+      "projectPath": "D:\\Meus Documentos\\GitHub\\DistribuicaoBinomial\\TrabalhoDistribuicaoBinomial.csproj",
       "packagesPath": "C:\\Users\\Igor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Igor\\Documents\\Probabilidade\\DistribuicaoBinomial\\obj\\",
+      "outputPath": "D:\\Meus Documentos\\GitHub\\DistribuicaoBinomial\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
