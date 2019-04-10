@@ -78,53 +78,6 @@ namespace TrabalhoDistribuicaoBinomial.Classes
             Console.ReadKey();
         }
 
-        private void RealizarCalculoPoisson(DistribuicaoBinomial distribuicaoBinomial, ref double resultado)
-        {
-            distribuicaoBinomial.ObterValorCalculoPoisson();
-            distribuicaoBinomial.CalcularValorPoisson();
-            resultado = Math.Round(distribuicaoBinomial.CalcularDistribuicaoDePoisson(), 4);
-        }
-
-        private void RealizarCalculoDistribuicaoBinomial(DistribuicaoBinomial distribuicaoBinomial, ref double resultado)
-        {
-            distribuicaoBinomial.ObterValoresPoisson();
-            resultado = Math.Round(distribuicaoBinomial.CalcularDistribuicaoDePoisson(), 4);
-        }
-
-        private void ApresentarMenuPoisson(DistribuicaoBinomial distribuicaoBinomial, ref double resultado)
-        {
-            string entrada = "";
-
-            do
-            {
-                Console.Clear();
-                Console.WriteLine("Deseja calcular o valor de Poisson? (1 - Sim/2 - Não)");
-                Console.Write("Resposta: ");
-                entrada = Console.ReadLine();
-
-                entrada = padronizacao.TratarPontuacaoEntrada(entrada);
-
-                if (entrada == "1")
-                {
-                    RealizarCalculoPoisson(distribuicaoBinomial, ref resultado);
-                    break;
-                }
-
-                else if (entrada == "2")
-                {
-                    RealizarCalculoDistribuicaoBinomial(distribuicaoBinomial, ref resultado);
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("");
-                    Console.WriteLine("Entrada inválida, favor entrar com uma resposta válida (1 - Sim/2 - Não)");
-                    Console.WriteLine("Aperte qualquer tecla para continuar...");
-                    Console.ReadKey();
-                }
-            } while (true);
-        }
-
         private void EscolherMenu(int opcao)
         {
             DistribuicaoBinomial distribuicaoBinomial = new DistribuicaoBinomial();
@@ -139,8 +92,6 @@ namespace TrabalhoDistribuicaoBinomial.Classes
             }
             else if (opcao == 2)
             {
-                double resultado = 0;
-
                 Console.Clear();
                 distribuicaoBinomial.ObterValores();
                 var resultadoFinal = distribuicaoBinomial.CalcularDistribuicaoBinomialAcumulada();

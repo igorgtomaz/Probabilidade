@@ -63,23 +63,6 @@ namespace TrabalhoDistribuicaoBinomial.Classes
 
             return total;
         }
-
-        public double CalcularDistribuicaoDePoisson()
-        {
-            AnaliseCombinatoria analise = new AnaliseCombinatoria();
-
-            var euler = Math.E;
-            var fatorialK = analise.CalcularFatorial(this.X);
-            var eulerElevado = Math.Round(Math.Pow(euler, (this.Lambda * -1)), 9);
-            var lambdaElevado = Math.Round(Math.Pow(this.Lambda, this.X), 2);
-
-            return (eulerElevado * lambdaElevado) / fatorialK;
-        }
-
-        public void CalcularValorPoisson()
-        {
-            this.Lambda = (this.N * this.P);
-        }
         #endregion
 
         #region Métodos Privados
